@@ -29,7 +29,8 @@ interface Multimedia {
   copyright: string
   short_url: string
 }
-
 export interface Props {
   title: string
+  photo: string
+  caption: string
 }

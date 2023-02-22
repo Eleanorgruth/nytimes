@@ -10,10 +10,13 @@ const ArticleContainer: FC = () => {
     fetchTopStories("home")
       .then(data => setTopStories(data.results))
   }, [])
-  const topStoriesArray = topStories.map((story)=> {
+  const topStoriesArray = topStories.map((story, index)=> {
     return (
       <Article
+        key={index}
         title={story.title}
+        photo ={story.multimedia?.[0].url || "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930"}
+        caption ={story?.multimedia?.[0].caption || "no photo avalible"}
       />
     )
   })
