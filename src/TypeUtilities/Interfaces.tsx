@@ -31,6 +31,8 @@ interface Multimedia {
 }
 export interface Props {
   title: string
+  url: string
+  abstract: string
   photo: string
   caption: string
 }
