@@ -22,7 +22,7 @@ const ArticleContainer: FC = () => {
   })
 
   return(
-    <div>
+    <div className='article-container'>
       {topStoriesArray}
     </div>
   )
