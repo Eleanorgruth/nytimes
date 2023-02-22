@@ -66,7 +66,7 @@ const Nav: FC = () =>  {
           >
             <MenuIcon />
           </IconButton>
-          <NavLink to="/" className="navLink">
+          <NavLink to="/" className="nav-link">
           <Typography
             variant="h2"
             noWrap
