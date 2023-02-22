@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './Article.css';
-import { Props } from '../../TypeUtilities/Interfaces';
+import { ArticleProps } from '../../TypeUtilities/Interfaces';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom"
 
-const Article: FC<Props> = ({title, photo, caption, abstract, url}) => {
+const Article: FC<ArticleProps> = ({title, photo, caption, abstract, url, id}) => {
   return (
     <Card sx={{ maxWidth: 345 , marginBottom: 5 }}>
     <CardMedia
@@ -43,7 +43,7 @@ const Article: FC<Props> = ({title, photo, caption, abstract, url}) => {
       <Button
         size="small"
         component={Link}
-        to={`/${title}`}
+        to={`/${id}`}
       >
         Learn More
       </Button>

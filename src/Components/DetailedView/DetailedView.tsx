@@ -1,43 +1,25 @@
-import { Typography } from '@mui/material';
+import { Typography, Container } from '@mui/material';
 import React, { FC } from 'react';
 import './DetailedView.css';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from "react-router-dom"
+import { TopStoriesProps, TopStoriesObject, Multimedia } from '../../TypeUtilities/Interfaces';
 
-const srcset = (image: string, size: number, rows = 1, cols = 1) => {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  }
-}
-const DetailedView: FC = () => {
-  const { article } = useParams();
-  console.log(article)
-
+const DetailedView: FC<TopStoriesProps> = ({topStories}) => {
+  const { id } = useParams<{id: string}>();
+  const selectedStory:TopStoriesObject = topStories[Number(id)]
   return (
-    <h1>Test</h1>
+    <Container sx={{maxWidth:"lg", marginTop:10}}>
+        <Typography variant='h3' component="h2">
+          {selectedStory.title}
+        </Typography>
+    
+    </Container>
+    
+    
+  
   )
-  // return (
-  //   <ImageList
-  //     sx={{ width: 500, height: 450 }}
-  //     variant="quilted"
-  //     cols={4}
-  //     rowHeight={121}
-  //   >
-  //     {itemData.map((item) => (
-  //       <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-  //         <img
-  //           {...srcset(item.img, 121, item.rows, item.cols)}
-  //           alt={item.title}
-  //           loading="lazy"
-  //         />
-  //       </ImageListItem>
-  //     ))}
-  //   </ImageList>
-  // );
 }
 
 export default DetailedView;
