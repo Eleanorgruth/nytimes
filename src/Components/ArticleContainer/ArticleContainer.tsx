@@ -13,6 +13,9 @@ const ArticleContainer: FC = () => {
   const topStoriesArray = topStories.map((story, index)=> {
     return (
       <Article
+        publishDate={story.published_date}
+        byline={story.byline}
+        multimedia={story.multimedia}
         key={index}
         url={story.url}
         title={story.title}

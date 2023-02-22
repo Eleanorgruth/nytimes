@@ -30,6 +30,9 @@ interface Multimedia {
   short_url: string
 }
 export interface Props {
+  publishDate: string
+  byline: string
+  multimedia: Multimedia[] | null
   title: string
   url: string
   abstract: string

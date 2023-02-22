@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import ArticleContainer from '../ArticleContainer/ArticleContainer';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import DetailedView from '../DetailedView/DetailedView';
 
 const App: FC = () => {
   return (
@@ -15,9 +16,10 @@ const App: FC = () => {
           path="/"
           element={<ArticleContainer/>}
         />
-        {/* <Route
+        <Route
           path="/:article"
-        /> */}
+          element={<DetailedView/>}
+        />
       </Routes>
     </div>
   );

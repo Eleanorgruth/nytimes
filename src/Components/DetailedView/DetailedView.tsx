@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import './DetailedView.css';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { useParams } from "react-router-dom"
 
 const srcset = (image: string, size: number, rows = 1, cols = 1) => {
   return {
@@ -13,6 +14,9 @@ const srcset = (image: string, size: number, rows = 1, cols = 1) => {
   }
 }
 const DetailedView: FC = () => {
+  const { article } = useParams();
+  console.log(article)
+
   return (
     <h1>Test</h1>
   )
