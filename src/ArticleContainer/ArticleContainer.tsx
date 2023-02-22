@@ -14,7 +14,9 @@ const ArticleContainer: FC = () => {
     return (
       <Article
         key={index}
+        url={story.url}
         title={story.title}
+        abstract={story.abstract}
         photo ={story.multimedia?.[0].url || "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930"}
         caption ={story?.multimedia?.[0].caption || "no photo avalible"}
       />
