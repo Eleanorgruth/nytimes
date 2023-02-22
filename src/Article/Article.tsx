@@ -9,24 +9,37 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
-const Article: FC<Props> = ({title, photo, caption}) => {
+const Article: FC<Props> = ({title, photo, caption, abstract, url}) => {
   return (
     <Card sx={{ maxWidth: 345 , marginBottom: 5 }}>
     <CardMedia
-      sx={{ height: 140 }}
+      sx={{
+        height: 0,
+        paddingTop: '56.25%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'contain'
+      }}
       image={photo}
-      title={`image of ${title}`}
+      title={`image of ${caption}`}
     />
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">
         {title}
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        {caption}
+        {abstract}
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small">Share</Button>
+      <Button 
+        size="small"
+        component="a"
+        href={url}
+        target="_blank"
+      >
+        Read this Article
+      </Button>
       <Button size="small">Learn More</Button>
     </CardActions>
   </Card>
