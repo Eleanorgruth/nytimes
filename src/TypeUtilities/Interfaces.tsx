@@ -18,7 +18,6 @@ export interface TopStoriesObject {
   geo_facet: string[]
   multimedia: Multimedia[]
 }
-
 interface Multimedia {
   url: string
   format: string
@@ -29,5 +28,8 @@ interface Multimedia {
   caption: string
   copyright: string
   short_url: string
+}
 
+export interface Props {
+  title: string
 }
