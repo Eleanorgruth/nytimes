@@ -1,7 +1,7 @@
 import React, { FC , useEffect, useState} from 'react';
-import { fetchTopStories } from '../apiCalls';
+import { fetchTopStories } from '../../apiCalls';
 import Article from '../Article/Article';
-import { TopStoriesObject } from '../TypeUtilities/Interfaces';
+import { TopStoriesObject } from '../../TypeUtilities/Interfaces';
 import './ArticleContainer.css';
 
 const ArticleContainer: FC = () => {
