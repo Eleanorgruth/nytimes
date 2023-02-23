@@ -3,13 +3,14 @@ import React, { FC } from 'react';
 import './DetailedView.css';
 import { useParams } from "react-router-dom"
 import { TopStoriesProps, TopStoriesObject} from '../../TypeUtilities/Interfaces';
+import Error from '../Error/Error';
 
 const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>()
   const selectedStory: TopStoriesObject = topStories[Number(id)]
   return (
     <div>
-    {selectedStory &&
+    {selectedStory ?
     <Container sx={{ maxWidth: "md", marginTop: 10 }}>
       <Typography 
         variant='h3'
@@ -46,8 +47,10 @@ const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
         >
         Read the Article
       </Button>
-    </Container>}
-        </div>
+    </Container> 
+    : <Error/>
+    }
+    </div>
   )
 }
 
