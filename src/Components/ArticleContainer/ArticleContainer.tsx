@@ -1,17 +1,9 @@
 import React, { FC , useEffect, useState} from 'react';
-//import { TopStoriesObject } from '../../TypeUtilities/Interfaces';
-// import { fetchTopStories } from '../../apiCalls';
 import Article from '../Article/Article';
-// import { TopStoriesObject } from '../../TypeUtilities/Interfaces';
 import './ArticleContainer.css';
 import { TopStoriesProps } from '../../TypeUtilities/Interfaces';
 
 const ArticleContainer: FC<TopStoriesProps> = ({topStories}) => {
-  // const [topStories, setTopStories] = useState<TopStoriesObject[]>([])
-  // useEffect(()=> {
-  //   fetchTopStories("home")
-  //     .then(data => setTopStories(data.results))
-  // }, [])
   const topStoriesArray = topStories.map((story, index)=> {
     return (
       <Article
