@@ -41,3 +41,7 @@ export interface ArticleProps {
 export interface TopStoriesProps {
   topStories: TopStoriesObject[];
 }
+
+export interface NavProps {
+  setTopStoriesCategory: (category: string) => void;
+}
