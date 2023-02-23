@@ -34,10 +34,10 @@ const NavDrawer: FC<NavProps> = ({setTopStoriesCategory}) => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["arts", "automobiles", "books", "business", "fashion", "food", "health", "home", "insider", "magazine", "movies", "nyregion", "obituaries", "opinion", "politics", "realestate", "science", "sports", "sundayreview", "technology", "theater", "t-magazine", "travel", "upshot", "us", "world"].map((text, index) => (
+        {["Arts", "Automobiles", "Books", "Business", "Fashion", "Food", "Health", "Home", "Insider", "Magazine", "Movies", "Nyregion", "Obituaries", "Opinion", "Politics", "Realestate", "Science", "Sports", "Sundayreview", "Technology", "Theater", "T-magazine", "Travel", "Upshot", "US", "World"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={()=> {
-              setTopStoriesCategory(text)
+              setTopStoriesCategory(text.toLocaleLowerCase())
             }}>
               <ListItemText primary={text} />
             </ListItemButton>
