@@ -8,6 +8,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavProps } from '../../TypeUtilities/Interfaces';
+import { NavLink } from 'react-router-dom';
 
 const NavDrawer: FC<NavProps> = ({setTopStoriesCategory}) => {
   const [open, setOpen] = React.useState(false);
@@ -33,13 +34,15 @@ const NavDrawer: FC<NavProps> = ({setTopStoriesCategory}) => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["Arts", "Automobiles", "Books", "Business", "Fashion", "Food", "Health", "Home", "Insider", "Movies", "Obituaries", "Opinion", "Politics", "Science", "Sports", "Technology", "Theater", "Travel", "Upshot", "US", "World"].map((text, index) => (
+        {["Arts", "Automobiles", "Books", "Business", "Fashion", "Food", "Health", "Home", "Insider", "Movies", "Obituaries", "Opinion", "Politics", "Science", "Sports", "Technology", "Theater", "Travel", "Upshot", "US", "World"].map((text) => (
           <ListItem key={text} disablePadding>
+            <NavLink to="/" className="nav-link">
             <ListItemButton onClick={()=> {
               setTopStoriesCategory(text.toLocaleLowerCase())
             }}>
               <ListItemText primary={text} />
             </ListItemButton>
+            </NavLink>
           </ListItem>
         ))}
       </List>

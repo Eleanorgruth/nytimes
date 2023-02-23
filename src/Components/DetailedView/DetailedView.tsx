@@ -1,10 +1,8 @@
 import { Typography, Container, Button } from '@mui/material';
 import React, { FC } from 'react';
 import './DetailedView.css';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from "react-router-dom"
-import { TopStoriesProps, TopStoriesObject, Multimedia } from '../../TypeUtilities/Interfaces';
+import { TopStoriesProps, TopStoriesObject} from '../../TypeUtilities/Interfaces';
 
 const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
   const { id } = useParams<{ id: string }>();
@@ -40,9 +38,6 @@ const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
         Read the Article
       </Button>
     </Container>
-
-
-
   )
 }
 
