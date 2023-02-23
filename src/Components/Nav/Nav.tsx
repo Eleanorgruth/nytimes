@@ -75,9 +75,12 @@ const Nav: FC<NavProps> = ({ setTopStoriesCategory }) => {
               variant="h2"
               noWrap
               component="h1"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              sx={{
+                flexGrow: 1,
+                display: "block",
+                fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }}}
             >
-              New York Times
+              NY Times Reader
             </Typography>
           </NavLink>
           {/* <Search>

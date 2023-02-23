@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -34,7 +33,7 @@ const NavDrawer: FC<NavProps> = ({setTopStoriesCategory}) => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["Arts", "Automobiles", "Books", "Business", "Fashion", "Food", "Health", "Home", "Insider", "Magazine", "Movies", "Nyregion", "Obituaries", "Opinion", "Politics", "Realestate", "Science", "Sports", "Sundayreview", "Technology", "Theater", "T-magazine", "Travel", "Upshot", "US", "World"].map((text, index) => (
+        {["Arts", "Automobiles", "Books", "Business", "Fashion", "Food", "Health", "Home", "Insider", "Movies", "Obituaries", "Opinion", "Politics", "Science", "Sports", "Technology", "Theater", "Travel", "Upshot", "US", "World"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={()=> {
               setTopStoriesCategory(text.toLocaleLowerCase())

@@ -2,6 +2,15 @@
   text-decoration: none;
   color: inherit;
 }
+.image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .selected-story-image {
   width: 40vw;
+}
+.caption {
+  width: 40vw;
+  align-content: center;
 }
