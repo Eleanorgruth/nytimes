@@ -1,4 +1,4 @@
-import React, { FC , useEffect, useState} from 'react';
+import React, { FC } from 'react';
 import Article from '../Article/Article';
 import './ArticleContainer.css';
 import { TopStoriesProps } from '../../TypeUtilities/Interfaces';
