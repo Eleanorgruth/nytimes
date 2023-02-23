@@ -7,6 +7,7 @@ const ArticleContainer: FC<TopStoriesProps> = ({topStories}) => {
   const topStoriesArray = topStories.map((story, index)=> {
     return (
       <Article
+        key={index}
         id={index}
         url={story.url}
         title={story.title}

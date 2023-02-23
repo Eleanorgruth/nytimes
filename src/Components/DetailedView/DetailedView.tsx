@@ -9,7 +9,14 @@ const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
   const selectedStory: TopStoriesObject = topStories[Number(id)]
   return (
     <Container sx={{ maxWidth: "md", marginTop: 10 }}>
-      <Typography variant='h3' component="h2">
+      <Typography 
+        variant='h3'
+        component="h2"
+        sx={{
+          flexGrow: 1,
+          display: "block",
+          fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }
+        }}>
         {selectedStory.title}
       </Typography>
       <Typography variant="h5" gutterBottom>

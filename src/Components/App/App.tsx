@@ -21,7 +21,8 @@ const App: FC = () => {
       <Routes>
         <Route
           path="/"
-          element={<ArticleContainer
+          element={
+            <ArticleContainer
             topStories={topStories}
             />}
         />
