@@ -11,7 +11,7 @@ import { Link } from "react-router-dom"
 
 const Article: FC<ArticleProps> = ({title, photo, caption, abstract, url, id}) => {
   return (
-    <Card sx={{ maxWidth: 345 , marginBottom: 5 }}>
+    <Card sx={{ maxWidth: 500 , marginBottom: 5 }}>
     <CardMedia
       sx={{
         height: 0,
