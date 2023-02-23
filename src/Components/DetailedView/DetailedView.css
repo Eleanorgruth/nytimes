@@ -1,0 +1,7 @@
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+.selected-story-image {
+  width: 40vw;
+}

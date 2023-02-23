@@ -18,7 +18,7 @@ export interface TopStoriesObject {
   geo_facet: string[]
   multimedia: Multimedia[]
 }
-interface Multimedia {
+export interface Multimedia {
   url: string
   format: string
   height: number
@@ -29,8 +29,19 @@ interface Multimedia {
   copyright: string
   short_url: string
 }
-export interface Props {
+export interface ArticleProps {
+  id: number
   title: string
+  url: string
+  abstract: string
   photo: string
   caption: string
+}
+
+export interface TopStoriesProps {
+  topStories: TopStoriesObject[];
+}
+
+export interface NavProps {
+  setTopStoriesCategory: (category: string) => void;
 }
