@@ -43,7 +43,7 @@ const Article: FC<ArticleProps> = ({title, photo, caption, abstract, url, id}) =
       <Button
         size="small"
         component={Link}
-        to={`/${id}`}
+        to={`/article/${id}`}
       >
         Learn More
       </Button>
