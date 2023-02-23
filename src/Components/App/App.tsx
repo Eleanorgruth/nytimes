@@ -10,16 +10,14 @@ import Nav from '../Nav/Nav';
 
 const App: FC = () => {
   const [topStories, setTopStories] = useState<TopStoriesObject[]>([])
+  const [topStoriesCategory, setTopStoriesCategory] = useState<string>("home")
   useEffect(()=> {
-    fetchTopStories("home")
+    fetchTopStories(topStoriesCategory)
       .then(data => setTopStories(data.results))
-  }, [])
+  }, [topStoriesCategory])
   return (
     <div className="App">
-      <Nav/>
-      {/* <Typography variant='h2' component="h1">
-        New York Times
-      </Typography> */}
+      <Nav setTopStoriesCategory={setTopStoriesCategory}/>
       <Routes>
         <Route
           path="/"
