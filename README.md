@@ -13,3 +13,9 @@ This project was an 8 hour timed coding challenge designed to pull articles from
 ## Setup
 - clone down repo
 - run `npm start`
+
+## Planning React Component Architecture
+![Screen Shot 2023-02-23 at 11 12 01 AM](https://user-images.githubusercontent.com/108287127/221007985-0692062e-58ec-43b2-8de6-8fa97dad0eb2.png)
+
+## App Preview
+![Feb-23-2023 12-21-40](https://user-images.githubusercontent.com/108287127/221009119-99bd1780-7d8a-43cd-9c49-2ab8c4825d20.gif)
