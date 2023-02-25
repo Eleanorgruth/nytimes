@@ -4,10 +4,12 @@ import './DetailedView.css';
 import { useParams } from "react-router-dom"
 import { TopStoriesProps, TopStoriesObject} from '../../TypeUtilities/Interfaces';
 import Error from '../Error/Error';
+import dayjs from 'dayjs'
 
 const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
   const { id } = useParams<{ id: string }>()
   const selectedStory: TopStoriesObject = topStories[Number(id)]
+  const date = dayjs(selectedStory.published_date).format('MMMM D, YYYY')
   return (
     <div>
     {selectedStory ?
@@ -24,6 +26,9 @@ const DetailedView: FC<TopStoriesProps> = ({ topStories }) => {
       </Typography>
       <Typography variant="h5" gutterBottom>
         {selectedStory.byline}
+      </Typography>
+     <Typography variant="h5" gutterBottom>
+        {date}
       </Typography>
       <div className='image-div'>
       <img
